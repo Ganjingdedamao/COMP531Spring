@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Pizza Order</title>
+    <meta charest="UTF-8">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Example HTML page">
+    <meta name="author" content="Wanyi Liu">
+    <style>
+
+    </style>
+    <script type="text/javascript">
+
+        function getQueryStr(name)//get value of parameter by parameter's name
+        {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)
+                return  unescape(r[2]); 
+            return null;
+        }
+        function setTable(){//set values for table
+            document.getElementById("username").innerHTML="<h2>"+getQueryStr("username")+"</h2>";
+            document.getElementById("street").innerHTML="<h2>"+getQueryStr("street")+"</h2>"; 
+            document.getElementById("phone").innerHTML="<h2>"+getQueryStr("phone")+"</h2>"; 
+            document.getElementById("size").innerHTML="<h2>"+getQueryStr("size")+"</h2>"; 
+            document.getElementById("topping").innerHTML="<h2>"+getQueryStr("topping")+"</h2>"; 
+        }
+        
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <noscript>Please enable Javascript to view this page!</noscript>
+
+</head>
+
+<body onload="setTable()"><!--call setTable() when loading this page-->
+    <h1>Submitted Pizza Order Form</h1><!--title of this page-->
+    <img src="./Pizza.jpg" width="500px"><!--picture-->
+    <table id="PizzaTable" border="1"><!--table-->
+        <tr>
+            <td><h2>Name</h2></td><!--row1 username-->
+            <td id="username"></td>
+        </tr>
+        <tr>
+            <td><h2>Address</h2></td><!--row2 address-->
+            <td id="street"></td>
+        </tr>
+        <tr>
+            <td><h2>Phone</h2></td><!--row3 phone-->
+            <td id="phone"></td>
+        </tr>
+        <tr>
+            <td><h2>Pizza Size</h2></td><!--row4 size of pizza-->
+            <td id="size"></td>
+        </tr>
+        <tr>
+            <td><h2>Pizza Toppings</h2></td><!--row5 toppings on pizza-->
+            <td id="topping"></td>
+        </tr>
+    </table>
+
+
+</body>
+
+
