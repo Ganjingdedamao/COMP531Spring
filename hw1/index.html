@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Registration Page</title>
+    <meta charest="UTF-8">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Example HTML page">
+    <meta name="author" content="Wanyi Liu">
+    <style>
+
+    </style>
+    <script type="text/javascript">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <noscript>Please enable Javascript to view this page!</noscript>
+
+</head>
+
+<body onload="setTime()">
+    <!-- The title of the form-->
+    <h1>Registration Form</h1>
+    <!-- Using GET  method, when the form is submitted to go FormProcesor.html-->
+    <form name="RegForm" id="RegForm" method="GET" action="FormProcesor.html">
+        <p>
+            <h3>Account Name: </h3>
+            <!--account name-->
+            <input type="text" name="acco_name" id="acco_name" style="width:240px;" value="">
+        </p>
+        <p>
+            <h3>Display Name(optional): </h3>
+            <!--display name-->
+            <input type="text" name="disp_name" id="disp_name" style="width:240px;" value="">
+        </p>
+        <p>
+            <h3>Email Address: </h3>
+            <!--email-->
+            <input type="text" name="email" id="email" style="width:480px;" value="">
+        </p>
+        <p>
+            <h3>Phone Number: </h3>
+            <!--phone number-->
+            <input type="tel" name="phone" id="phone" value="">
+        </p>
+        <p>
+            <h3>Date of Birth: </h3>
+            <!--date of birth-->
+            <label><input name="birth" id="birth" type="date" value="" /> </label> 
+        </p>
+        <p>
+            <h3>Zipcode: </h3>
+            <!--zipcode-->
+            <label><input name="zipcode" id="zipcode" type="text" value=""/> </label> 
+        </p>
+        <p>
+            <h3>Password: </h3>
+            <!--password-->
+            <label><input name="password" id="password" type="password" value="" /> </label> 
+        </p>
+        <p>
+            <h3>Password Confirmation: </h3>
+            <!--password confirmation-->
+            <label><input name="pass_conf" id="pass_conf" type="password" value="" /> </label> 
+        </p>
+        <p>
+            <!--timestamp-->
+            <label><input name="time" id="time" type="hidden" value="" /> </label>
+            <!--timedisplay-->
+            <label><input name="timedisplay" id="timedisplay" type="hidden" value="" /> </label> 
+        </p>
+        <!--submit button, call validation() when being clicked-->
+        <input type="submit" id="submitbtn" value="Submit Form" name="submitbtn" onclick="return validation()">
+        <!--clean button, call clearform() when being clicked-->
+        <input type="submit" id="cleanbtn" value="Clear Form" name="cleanbtn" onclick="return clearform()">
+    </form>
+
+</body>
+<script type="text/javascript">
+    //validate the data
+    function validation(){
+        //set the regular expression for account name
+        var nameReg = new RegExp("^[a-zA-Z][a-zA-Z0-9]*$");
+        //set the regular expression for zipcode
+        var zipReg = new RegExp("^[0-9]{5}$|^[0-9]{5}-[0-9]{4}$");
+        //set the regular expression for phone number
+        var phoneReg = new RegExp("^[1-9][0-9]{2}[-][0-9]{3}[-][0-9]{4}$");
+        //set the regular expression for email
+        var emailReg= new RegExp("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+.[a-zA-Z0-9_-]+$");
+        //account name required
+        if(document.getElementById('acco_name').value==""){
+            window.alert("Please input your account name!");
+            return false;
+        }
+        //validate account name
+        if(!(nameReg.test(document.getElementById('acco_name').value))){
+            window.alert("Your account name does not match the requested format. Account name can only be upper or lower case letters and numbers, but may not start with a number. Please enter a valid account name.");
+            return false;
+        }
+        //email required
+        if(document.getElementById('email').value==""){
+            window.alert("Please input your email addsress!");
+            return false;
+        }
+        //validate the email
+        if(!(emailReg.test(document.getElementById('email').value))){
+            //window.alert(document.getElementById('email').value);
+            window.alert("Your email does not match the requested format a@b.co, please enter a valid email address.");
+            return false;
+        }
+        //phone required
+        if(document.getElementById('phone').value==""){
+            window.alert("Please input your phone number!");
+            return false;
+        }
+        //use regular expression to validate the phone number
+        if(!(phoneReg.test(document.getElementById('phone').value))){
+            window.alert("Your phone number does not match the requested format 123-123-1234. Your phone number should not start with 0. Please enter a valid phone number.");
+            return false;
+        }
+        //date of birth required
+        if(document.getElementById('birth').value==""){
+            window.alert("Please input your date of birth!");
+            return false;
+        }
+        //validate date of birth
+        if(!agevalid(document.getElementById('birth').value)){
+            window.alert("Sorry! Only individuals 18 years of age or older on the day of registration are allowed to register.");
+            return false;
+        }
+        //zipcode required
+        if(document.getElementById('zipcode').value==""){
+            window.alert("Please input your zipcode!");
+            return false;
+        }
+        //use regular expression to validate the zipcode
+        if(!(zipReg.test(document.getElementById('zipcode').value))){
+            window.alert("Your zipcode does not match the requested format 99999 or 99999-9999. Please enter a valid zipcode.");
+            return false;
+        }
+        //password required
+        if(document.getElementById('password').value==""){
+            window.alert("Please input your password!");
+            return false;
+        }
+        //password confirmation required
+        if(document.getElementById('pass_conf').value!=document.getElementById('password').value){
+            window.alert("Your password confirmation is not as same as your password!");
+            return false;
+        }
+        
+        
+            window.alert("Submit successfully!");
+            return true;
+        
+    }
+    function clearform(form){//clear all data
+        document.getElementById('acco_name').value="";
+        document.getElementById('disp_name').value="";
+        document.getElementById('email').value="";
+        document.getElementById('phone').value="";
+        document.getElementById('birth').value="";
+        document.getElementById('zipcode').value="";
+        document.getElementById('password').value="";
+        document.getElementById('pass_conf').value="";
+        
+        return false;
+    }
+   
+
+    function setTime(){
+        //get time stamp
+        var d = new Date();
+        document.getElementById('time').value=Date.parse(d);
+        //set month and date array
+        var month=["01","02","03","04","05","06","07","08","09","10","11","12"];
+        var date=["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17",
+        "18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
+        //change time stamp to readable string
+        var timestr=d.getFullYear()+"-"+month[parseInt(d.getMonth())]+"-"+date[parseInt(d.getDate())-1];
+        //save readable string
+        document.getElementById('timedisplay').value=timestr;
+        //window.alert(document.getElementById('time').value);
+        
+        
+        
+    }
+    function agevalid(birth){//validate 18 years old
+        var now = document.getElementById('timedisplay').value;
+        now=now.split("-");
+        var now_Year=parseInt(now[0]);
+        var now_Month=parseInt(now[1]);
+        var now_Date=parseInt(now[2]);
+        birth=birth.split("-");
+        var birth_Year=parseInt(birth[0]);
+        var birth_Month=parseInt(birth[1]);
+        var birth_Date=parseInt(birth[2]);
+
+        if(now_Year-birth_Year<18) return false;
+        else if(now_Month-birth_Month<0) return false;
+        else if(now_Date-birth_Date<0) return false;
+        else return true; 
+
+    }
+</script>
+
