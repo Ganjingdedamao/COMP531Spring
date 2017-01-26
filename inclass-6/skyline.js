@@ -123,7 +123,7 @@ var taller=function(mousePos){
 	for(var i=1;i<=buildings.length;i=i+1){
 		var pos=buildings[i];
 		
-		if(pos.x1<=mousePos.x&&mousePos.x<=pos.x2&&pos.y1<=mousePos.y&&mousePos.y<=pos.y2)
+		if(pos!=undefined&&pos.x1<=mousePos.x&&mousePos.x<=pos.x2&&pos.y1<=mousePos.y&&mousePos.y<=pos.y2)
 		{	
 			var floor=pos.y1;
 			var oldfloor=canvas.height/2;
