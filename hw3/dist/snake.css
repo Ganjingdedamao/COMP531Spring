@@ -1,0 +1,46 @@
+body{ 
+	text-align:center;
+	background-image: url(http://www.bz55.com/uploads/allimg/140724/138-140H4112625-50.jpg);
+
+
+} 
+h1{
+	color: white;
+}
+h4{
+	color: white;
+}
+
+#board{
+	margin:0 auto;
+
+}
+
+#myCanvas{
+	border:1px solid #c3c3c3;
+	background-color: #FFFF6F;
+}
+.small-table{
+	margin-top:25px;
+	margin-left:10px;
+	background-color: white;
+	float:left;
+	border: 3px solid #9999FF;
+}
+.small-td{
+	width:33%;
+	border: 3px solid #9999FF;
+
+}
+.small-th{
+	width:33%;
+	border: 3px solid #9999FF;
+
+}
+.small-tr{
+	height:25px;
+
+}
+#rules{
+	float:left;
+}
