@@ -1,0 +1,7 @@
+{
+	"followeritems": [
+	    {"id": 0, "name": "Zhaokang Li", "headline": "Zhaokang's fun status!", "img": "./image/user1.jpg"},
+	    {"id": 1, "name": "Kejun Liu", "headline": "Kejun's fun status!", "img": "./image/user2.png"},
+	    {"id": 2, "name": "Yiqing Lu", "headline": "Yiqing's fun status!", "img" : "./image/user3.jpg"}
+	]
+}
