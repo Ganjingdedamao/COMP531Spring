@@ -1,6 +1,4 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-let articles = [
+const articles = [
 		{
 	    	"id": 1, 
 	    	"text": "Vivamus laoreet. Nullam tincidunt adipiscing enim. Phasellus tempus. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Fusce neque. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Vivamus aliquet elit ac nisl. Fusce fermentum odio nec arcu. Vivamus euismod mauris. In ut quam vitae odio lacinia tincidunt. Praesent ut ligula non mi varius sagittis. Cras sagittis. Praesent ac sem eget est egestas volutpat. Vivamus consectetuer hendrerit lacus. Cras non dolor. Vivamus in erat ut urna cursus vestibulum. Fusce commodo aliquam arcu. Nam commodo suscipit quam. Quisque id odio. Praesent venenatis metus at tortor pulvinar varius.", 
@@ -59,15 +57,7 @@ const getArticles = (req, res) => {
 		res.send(articles)
 	}
 }
-
-const app = express()
-app.use(bodyParser.json())
-app.get('/articles/:id*?', getArticles)
-app.post('/article', addArticle)
-
-
-const port = process.env.PORT || 3000
-const server = app.listen(port, () => {
-     const addr = server.address()
-     console.log(`Server listening at http://${addr.address}:${addr.port}`)
-})
+module.exports = (app) => {
+	app.get('/articles/:id*?', getArticles)
+	app.post('/article', addArticle)
+}
