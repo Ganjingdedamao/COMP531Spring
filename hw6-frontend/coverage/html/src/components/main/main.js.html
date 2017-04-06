@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\components\main\main.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/main/</a> main.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>21/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import Nav from './mainnav'
+import Headline from './headline'
+import Following from './following'
+import ArticleView from '../article/articleView'
+import NewArticle from '../article/newarticle'
+import Favorite from './favorite'
+import { searchArticle } from './filterArticle'
+&nbsp;
+const Main = <span class="fstat-no" title="function not covered" >({<span class="cstat-no" title="statement not covered" >message, sidebarMessage,search}) =&gt; {</span></span>
+	let <span class="cstat-no" title="statement not covered" >filtertext</span>
+	const <span class="cstat-no" title="statement not covered" >_search=<span class="fstat-no" title="function not covered" >()=&gt;{</span></span>
+		search(<span class="cstat-no" title="statement not covered" >filtertext.value)</span>
+	}
+	return (
+<span class="cstat-no" title="statement not covered" >		&lt;div&gt;</span>
+			&lt;Nav/&gt;
+			&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+			&lt;div className="container"&gt;
+				&lt;div className="row"&gt;
+					&lt;div className="col-xs-4 col-sm-4 col-md-2 col-lg-2 blog-sidebar"&gt;
+						&lt;Headline/&gt;
+						&lt;br/&gt;
+						&lt;div className="errordiv width_150"&gt;
+							&lt;h4&gt;{sidebarMessage}&lt;/h4&gt;
+						&lt;/div&gt;
+						&lt;Following/&gt;
+					&lt;/div&gt;
+				&lt;div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-md-offset-1 col-lg-offset-1 border_left"&gt;  
+					&lt;div className="row"&gt;
+						&lt;div className="errordiv"&gt;&lt;h4&gt;{message}&lt;/h4&gt;&lt;/div&gt;
+							&lt;NewArticle/&gt;
+						&lt;/div&gt;
+						&lt;hr/&gt;
+						&lt;div className="row" &gt;
+							&lt;div className="col-xs-12 col-sm-12 col-md-12 col-lg-12"&gt;
+								&lt;input id="searchInput" type="text" placeholder="Search Rice Book" name="" className="form-control float_left width_90 margin_5" onChange={ _search } ref={<span class="fstat-no" title="function not covered" >(node) =&gt; <span class="cstat-no" title="statement not covered" >filtertext = node }/&gt;</span></span>
+							&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;br/&gt;
+						&lt;div className="row" &gt;
+							&lt;ArticleView /&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div className="col-xs-12 col-sm-12 col-lg-2 col-md-2 blog-sidebar"&gt;
+						&lt;Favorite/&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;hr/&gt;
+				&lt;footer&gt;
+					&lt;p&gt;&amp;copy; Wanyi Liu 2016&lt;/p&gt;
+				&lt;/footer&gt;
+			&lt;/div&gt; 
+		&lt;/div&gt;
+	)
+}
+&nbsp;
+export default connect(
+<span class="fstat-no" title="function not covered" >	(state) =&gt; {</span>
+		return <span class="cstat-no" title="statement not covered" >{</span>
+			message: state.message,
+			sidebarMessage: state.sidebarMessage
+		}
+	},
+<span class="fstat-no" title="function not covered" >	(dispatch) =&gt; {</span>
+		return<span class="cstat-no" title="statement not covered" >{</span>
+			search: <span class="fstat-no" title="function not covered" >(text) =&gt;  <span class="cstat-no" title="statement not covered" >dispatch(searchArticle(text))</span></span>
+		}
+	}
+)(Main)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Apr 03 2017 16:32:43 GMT-0500 (中部夏令时)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
