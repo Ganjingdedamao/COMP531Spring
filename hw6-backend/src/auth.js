@@ -87,7 +87,7 @@ function generateCode(userObj){
 module.exports = (app) => {
 	app.use(cookieParser())
 	app.get('/',index)
-	app.put('/logout', isLoggedIn, logout)
+	app.put('/logout', logout)
 	app.post('/login', login)
 	app.post('/register', register)
 }
