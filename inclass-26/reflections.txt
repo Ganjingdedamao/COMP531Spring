@@ -1,0 +1,26 @@
+What did you hope to learn but did not?
+I think I do learn quite a lot of thing in this course. I love this course.
+
+What did you really enjoy learning about?
+I really enjoy learning the idea of react, because using react divide the concerns and make life easier.
+
+What worked well in the course? and how?
+I think the materials provided in this course are great. Most materials are tightly related.
+I learn a lot about the frontend and backend, and how to connect them. 
+And also test driven development learning helps me to build a good habit to develop web application.
+
+What did not work well in the course and how might it be improved?
+I think the course schedule is a little bit tight. That helps me improve my study ability. However, it sometimes
+drives me crazy. Maybe you can give more time for inclass exercise.
+
+What could I have done to help you more, presentation of material, design of in class
+exercises, goals of projects – and be specific please!
+I think that the game assignment is not relevant to other assignment. I think maybe it is ok to remove it or 
+replace it by some other related assignment, or make it a more complex assignment so that 
+we can learn more about HTML5 game development in it.
+
+Anything else you like to say?
+Finally, thank you so much for giving us such wonderful course! I really appreciate your help in this course.
+Thank you Scott.
+
+Wanyi Liu
