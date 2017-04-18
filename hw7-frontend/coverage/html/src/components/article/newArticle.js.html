@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\components\article\newarticle.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/article/</a> newarticle.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.09% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.35% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/31</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 statement, 1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import {addArticle} from './articleActions'
+&nbsp;
+const NewArticle =<span class="fstat-no" title="function not covered" >({<span class="cstat-no" title="statement not covered" >username, add})=&gt; {</span></span>
+  let <span class="cstat-no" title="statement not covered" >text</span>
+  let <span class="cstat-no" title="statement not covered" >picture</span>
+  let <span class="cstat-no" title="statement not covered" >file</span>
+  let <span class="cstat-no" title="statement not covered" >fd </span>
+  const <span class="cstat-no" title="statement not covered" >_add =<span class="fstat-no" title="function not covered" >()=&gt;{</span></span>
+    if(<span class="cstat-no" title="statement not covered" >text.value!=""){</span>
+      fd=<span class="cstat-no" title="statement not covered" >new FormData()</span>
+      fd.<span class="cstat-no" title="statement not covered" >append('text', text.value)</span>
+        if(<span class="cstat-no" title="statement not covered" >picture){</span>
+          fd.<span class="cstat-no" title="statement not covered" >append('image', picture)</span>
+       }
+      add(<span class="cstat-no" title="statement not covered" >username,text.value, fd)</span>
+      _cancle()
+    }
+  }
+  const <span class="cstat-no" title="statement not covered" >_upload=<span class="fstat-no" title="function not covered" >()=&gt;{</span></span>
+    upfile.<span class="cstat-no" title="statement not covered" >click()</span>
+  }
+  const <span class="cstat-no" title="statement not covered" >_cancle=<span class="fstat-no" title="function not covered" >()=&gt;{</span></span>
+    picture=<span class="cstat-no" title="statement not covered" >undefined</span>
+    file=<span class="cstat-no" title="statement not covered" >undefined</span>
+    text.<span class="cstat-no" title="statement not covered" >value=''</span>
+  }
+  const <span class="cstat-no" title="statement not covered" >_chooseImg=<span class="fstat-no" title="function not covered" >(e)=&gt;{</span></span>
+    picture = <span class="cstat-no" title="statement not covered" >e.target.files[0]</span>
+  }
+  return(
+<span class="cstat-no" title="statement not covered" >    &lt;div className="col-xs-12 col-sm-12 col-md-12 col-lg-12"&gt;</span>
+      &lt;h4 className="float_left margin_top_10"&gt;Post New Article&lt;/h4&gt;
+      &lt;input type="file" id="upfile" className="upload_file" accept="image/*" onChange={<span class="fstat-no" title="function not covered" >(e) =&gt; <span class="cstat-no" title="statement not covered" >_chooseImg(e)}/&gt;</span></span>
+      &lt;button id="cancleArt" className="btn btn-default float_right margin_5" onClick={ _cancle }&gt;Cancle &lt;span className="glyphicon glyphicon-remove-circle"&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;button id="postArt" className="btn btn-default float_right margin_5" onClick={ _add }&gt;Post &lt;span className="glyphicon glyphicon-send"&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;button id="uploadPic" className="btn btn-default float_right margin_5" onClick={ _upload }&gt;Photo &lt;span className="glyphicon glyphicon-camera"&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;textarea id="article" className="form-control width_100" placeholder="Input New Feed!" ref={ <span class="fstat-no" title="function not covered" >(node) =&gt; <span class="cstat-no" title="statement not covered" >text = node }&gt;&lt;/textarea&gt;  </span></span>
+    &lt;/div&gt;
+  )
+}
+export default connect(
+<span class="fstat-no" title="function not covered" >  (state) =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" >{</span>
+      username: state.username || ''
+    }
+  },
+<span class="fstat-no" title="function not covered" >  (dispatch) =&gt; {</span>
+    return<span class="cstat-no" title="statement not covered" >{</span>
+      add: <span class="fstat-no" title="function not covered" >(username, text, fd) =&gt;  <span class="cstat-no" title="statement not covered" >dispatch(addArticle(username, text, fd))</span></span>
+    }
+  }
+)(NewArticle)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Apr 03 2017 16:32:43 GMT-0500 (中部夏令时)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

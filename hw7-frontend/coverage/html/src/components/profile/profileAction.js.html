@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\components\profile\profileAction.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/profile/</a> profileAction.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>19/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.11% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.13% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/62</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Action, { resource, error, success} from '../../actions'
+&nbsp;
+export function gotoMain(username) {
+  return ({type: Action.GOTOMAIN, username})
+}
+export function logOut() {
+  return ({type: Action.LOGOUT})
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function updateProfile(acco_name, disp_name, email, phone, zipcode, password, pass_conf, profile){</span>
+  //set the regular expression for zipcode
+  const <span class="cstat-no" title="statement not covered" >zipReg = new RegExp("^[0-9]{5}$|^[0-9]{5}-[0-9]{4}$")</span>
+  //set the regular expression for phone number
+  const <span class="cstat-no" title="statement not covered" >phoneReg = new RegExp("^[1-9][0-9]{2}[-][0-9]{3}[-][0-9]{4}$")</span>
+  //set the regular expression for email
+  const <span class="cstat-no" title="statement not covered" >emailReg= new RegExp("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+.[a-zA-Z0-9_-]+$")</span>
+  //set the regular expression for account name
+  const <span class="cstat-no" title="statement not covered" >nameReg = new RegExp("^[a-zA-Z][a-zA-Z0-9]*$")</span>
+&nbsp;
+  if(<span class="cstat-no" title="statement not covered" >!validate(acco_name,nameReg)){</span>
+    const <span class="cstat-no" title="statement not covered" >message="Your account name does not match the requested format. Account name can only be upper or lower case letters and numbers, but may not start with a number. Please enter a valid account name."</span>
+    return (<span class="cstat-no" title="statement not covered" >error(message,""))</span>
+  }
+  //validate the email
+  if(<span class="cstat-no" title="statement not covered" >!validate(email,emailReg)){</span>
+    const <span class="cstat-no" title="statement not covered" >message="Your email does not match the requested format a@b.co, please enter a valid email address."</span>
+    return (<span class="cstat-no" title="statement not covered" >error(message,""))</span>
+  }
+  //use regular expression to validate the phone number
+  if(<span class="cstat-no" title="statement not covered" >!validate(phone,phoneReg)){</span>
+    const <span class="cstat-no" title="statement not covered" >message="Your phone number does not match the requested format 123-123-1234. Your phone number should not start with 0. Please enter a valid phone number."</span>
+    return (<span class="cstat-no" title="statement not covered" >error(message,""))</span>
+  }
+  //use regular expression to validate the zipcode
+  if(<span class="cstat-no" title="statement not covered" >!validate(zipcode,zipReg)){</span>
+    const <span class="cstat-no" title="statement not covered" >message="Your zipcode does not match the requested format 99999 or 99999-9999. Please enter a valid zipcode."</span>
+    return (<span class="cstat-no" title="statement not covered" >error(message,""))</span>
+  }
+  //password confirmation required
+  if(<span class="cstat-no" title="statement not covered" >pass_conf!=password){</span>
+    const <span class="cstat-no" title="statement not covered" >message="Your password confirmation is not as same as your password!"</span>
+    return (<span class="cstat-no" title="statement not covered" >error(message,""))</span>
+  }
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch)=&gt;{ </span></span>
+    if(<span class="cstat-no" title="statement not covered" >acco_name!="")</span>
+<span class="cstat-no" title="statement not covered" >      dispatch({type: Action.UPDATEPROFILE, acco_name: acco_name, message: "Update accont name successfully, but the change will not be persistent."})</span>
+    if(<span class="cstat-no" title="statement not covered" >disp_name!="")</span>
+<span class="cstat-no" title="statement not covered" >      dispatch({type: Action.UPDATEPROFILE, disp_name: disp_name, message: "Update display name successfully, but the change will not be persistent."})</span>
+    if(<span class="cstat-no" title="statement not covered" >email!="")</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(updateData('email', email))</span>
+    if(<span class="cstat-no" title="statement not covered" >zipcode!="")</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(updateData('zipcode', zipcode))</span>
+    if(<span class="cstat-no" title="statement not covered" >password!="")</span>
+<span class="cstat-no" title="statement not covered" >      dispatch(updateData('password', password))</span>
+    if(<span class="cstat-no" title="statement not covered" >phone!="")</span>
+<span class="cstat-no" title="statement not covered" >      dispatch({type: Action.UPDATEPROFILE, phone: phone, message: "Update phone successfully, but the change will not be persistent."})</span>
+  }
+}
+export <span class="fstat-no" title="function not covered" >function validate(infor,inforReg){</span>// validate the info
+  if(<span class="cstat-no" title="statement not covered" >infor!=""){</span>
+    if(<span class="cstat-no" title="statement not covered" >!(inforReg.test(infor))){</span>
+      return <span class="cstat-no" title="statement not covered" >false</span>
+    }
+  }
+  return <span class="cstat-no" title="statement not covered" >true</span>
+}
+//update each field of profile info 
+export <span class="fstat-no" title="function not covered" >function updateData(fieldName, value) {</span>
+  const <span class="cstat-no" title="statement not covered" >message = fieldName=='password'? "Update password successfully, but the change will not be persistent." : "Update " + fieldName + " successfully!"</span>
+  const <span class="cstat-no" title="statement not covered" >action = { type: Action.UPDATEPROFILE, message: message}</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >value) {</span>
+      const <span class="cstat-no" title="statement not covered" >payload = {}</span>
+      payload[<span class="cstat-no" title="statement not covered" >fieldName] = value</span>
+      resource(<span class="cstat-no" title="statement not covered" >'PUT', fieldName, payload).then(<span class="fstat-no" title="function not covered" >(r) =&gt; {</span></span>
+        if(<span class="cstat-no" title="statement not covered" >fieldName=='password'){</span>
+          action[<span class="cstat-no" title="statement not covered" >fieldName] = value</span>
+        }
+        else{
+          action[<span class="cstat-no" title="statement not covered" >fieldName] = r[fieldName]</span>
+        }
+        dispatch(<span class="cstat-no" title="statement not covered" >action)</span>
+      })
+      .catch(<span class="fstat-no" title="function not covered" >r =&gt;{ </span>
+        dispatch(<span class="cstat-no" title="statement not covered" >error("Failed to update profile", ""))</span>
+      })
+    }
+  } 
+}
+export <span class="fstat-no" title="function not covered" >function updateAvatar(fd){</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch)=&gt;{</span></span>
+    resource(<span class="cstat-no" title="statement not covered" >'PUT', 'avatar', fd, false).then(<span class="fstat-no" title="function not covered" >(r)=&gt;{</span></span>
+      dispatch(<span class="cstat-no" title="statement not covered" >{type: Action.UPDATEPROFILE, avatar : r.avatar})</span>
+    })
+    .catch(<span class="fstat-no" title="function not covered" >r=&gt;{</span>
+      dispatch(<span class="cstat-no" title="statement not covered" >error("Failed to upload new avatar", ""))</span>
+    })
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Apr 03 2017 16:32:43 GMT-0500 (中部夏令时)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

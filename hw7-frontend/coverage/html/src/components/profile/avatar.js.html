@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\components\profile\avatar.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/profile/</a> avatar.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40.91% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/18</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import {updateAvatar} from './profileAction'
+&nbsp;
+const Avatar =<span class="fstat-no" title="function not covered" >({<span class="cstat-no" title="statement not covered" >profile, updateAva})=&gt; {</span></span>
+  let <span class="cstat-no" title="statement not covered" >fd</span>
+  const <span class="cstat-no" title="statement not covered" >_chooseImg=<span class="fstat-no" title="function not covered" >(e)=&gt;{</span></span>
+    if(<span class="cstat-no" title="statement not covered" >e.target.files[0]){</span>
+      fd=<span class="cstat-no" title="statement not covered" >new FormData()</span>
+      fd.<span class="cstat-no" title="statement not covered" >append('image', e.target.files[0])</span>
+      updateAva(<span class="cstat-no" title="statement not covered" >fd)</span>
+    }
+  }
+  return(
+<span class="cstat-no" title="statement not covered" >    &lt;div&gt;</span>
+      &lt;div className="col-xs-6 col-sm-6 col-md-3 col-lg-3" &gt;
+        &lt;div className="thumbnail margin_top_10"&gt;
+          &lt;img data-src="holder.js/100%x180" src={profile.img}  className="img-responsive" alt="Responsive image"/&gt;
+          &lt;div className="caption"&gt;
+            &lt;button className="btn btn-default float_right margin_top_10"  onClick={<span class="fstat-no" title="function not covered" >()=&gt;{</span>upfile.<span class="cstat-no" title="statement not covered" >click()}}&gt;&lt;span className="glyphicon glyphicon-camera"&gt;&lt;/span&gt; Photo&lt;/button&gt;</span>
+            &lt;h3 id="Username" className=""&gt;{profile.disp_name}&lt;/h3&gt;
+            &lt;h4 id="fun_status" name="fun_status" className="margin_top_10"&gt;{profile.headline}&lt;/h4&gt;
+            &lt;input type="file" id="upfile" className="upload_file" onChange={<span class="fstat-no" title="function not covered" >(e)=&gt;<span class="cstat-no" title="statement not covered" >_chooseImg(e)}/&gt;</span></span>
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className="col-xs-6 col-sm-6 col-md-9 col-lg-9 border_bottom height_300px" &gt;
+        &lt;h3 className="float_bottom"&gt;Your Profile&lt;/h3&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  )
+}
+export default connect(
+<span class="fstat-no" title="function not covered" >  (state) =&gt; {</span>
+    return <span class="cstat-no" title="statement not covered" >{</span>
+      profile: state.profile[0] || ''
+    }
+  },
+<span class="fstat-no" title="function not covered" >  (dispatch) =&gt; {</span>
+    return<span class="cstat-no" title="statement not covered" >{</span>
+      updateAva: <span class="fstat-no" title="function not covered" >(fd) =&gt;  <span class="cstat-no" title="statement not covered" >dispatch(updateAvatar(fd))</span></span>
+    }
+  }
+)(Avatar)
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Apr 03 2017 16:32:43 GMT-0500 (中部夏令时)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
